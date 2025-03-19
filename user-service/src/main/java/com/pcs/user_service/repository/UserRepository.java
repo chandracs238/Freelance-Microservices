@@ -2,7 +2,6 @@ package com.pcs.user_service.repository;
 
 import com.pcs.user_service.entity.RoleType;
 import com.pcs.user_service.entity.User;
-import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

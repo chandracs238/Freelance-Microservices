@@ -29,9 +29,15 @@ public class AuthController {
         return ResponseEntity.ok("Welcome");
     }
 
-    @PostMapping("/api/auth/register")
-    public ResponseEntity<String> register(@RequestBody AuthRequest request) {
+    @PostMapping("/api/auth/freelancer/register")
+    public ResponseEntity<String> registerFreelancer(@RequestBody AuthRequest request) {
         userDetailsService.saveUser(request.getUsername(), request.getPassword(), "FREELANCER");
+        return ResponseEntity.ok("User registered successfully");
+    }
+
+    @PostMapping("/api/auth/client/register")
+    public ResponseEntity<String> registerClient(@RequestBody AuthRequest request) {
+        userDetailsService.saveUser(request.getUsername(), request.getPassword(), "CLIENT");
         return ResponseEntity.ok("User registered successfully");
     }
 
